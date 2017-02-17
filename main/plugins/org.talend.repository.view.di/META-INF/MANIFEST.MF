@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Data Integration View Plug-in
+Bundle-SymbolicName: org.talend.repository.view.di;singleton:=true
+Bundle-Version: 6.4.0.qualifier
+Bundle-Activator: org.talend.repository.view.di.DIRepositoryViewPlugin
+Bundle-Vendor: .Talend SA.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.expressions;visibility:=reexport,
+ org.eclipse.ui,
+ org.eclipse.ui.navigator,
+ org.talend.commons.ui,
+ org.talend.core.runtime,
+ org.talend.core.repository;visibility:=reexport,
+ org.talend.commons.runtime,
+ org.talend.repository.view;visibility:=reexport,
+ org.talend.repository.items.importexport,
+ org.talend.repository.items.importexport.ui
+Bundle-ActivationPolicy: lazy
+Export-Package: org.talend.repository.view.di,
+ org.talend.repository.view.di.metadata.action,
+ org.talend.repository.view.di.metadata.content,
+ org.talend.repository.view.di.metadata.content.rules,
+ org.talend.repository.view.di.metadata.tester,
+ org.talend.repository.view.di.model,
+ org.talend.repository.view.di.viewer.action,
+ org.talend.repository.view.di.viewer.content,
+ org.talend.repository.view.di.viewer.content.code,
+ org.talend.repository.view.di.viewer.content.doc,
+ org.talend.repository.view.di.viewer.filter,
+ org.talend.repository.view.di.viewer.handlers,
+ org.talend.repository.view.di.viewer.sorter,
+ org.talend.repository.view.di.viewer.tester,
+ org.talend.repository.view.di.viewer.tester.doc

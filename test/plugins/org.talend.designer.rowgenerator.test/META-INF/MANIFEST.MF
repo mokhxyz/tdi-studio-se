@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.talend.designer.rowgenerator.test
+Bundle-Version: 6.4.0.qualifier
+Fragment-Host: org.talend.designer.rowgenerator
+Require-Bundle: org.talend.testutils

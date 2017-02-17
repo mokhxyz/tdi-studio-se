@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="fieldType_mapping" name="FieldType Mapping" schema="schema/fieldType_mapping.exsd"/>
+   
+   <extension
+         point="org.talend.designer.core.process_provider">
+      <ProcessProvider
+            class="org.talend.designer.core.generic.model.ComponentsProvider"
+            pluginId="org.talend.designer.core.generic">
+      </ProcessProvider>
+   </extension>
+   <extension
+         point="org.talend.core.migrationTask">
+        <projecttask
+            beforeLogon="false"
+            breaks="6.2.0"
+            class="org.talend.designer.core.generic.model.migration.NewSalesforceMigrationTask"
+            description="New salesforce migration task"
+            id="org.talend.designer.core.generic.model.migration.NewSalesforceMigrationTask"
+            name="NewSalesforceMigrationTask"
+            version="6.2.0">
+        </projecttask>
+        <projecttask
+              beforeLogon="false"
+              breaks="6.2.1"
+              class="org.talend.designer.core.generic.model.migration.Salesforce620Migration"
+              description="Migrate salesforce components from 6.2.0 to 6.2.1"
+              id="org.talend.designer.core.generic.model.migration.Salesforce620Migration"
+              name="Salesforce620Migration"
+              version="6.2.1">
+        </projecttask>
+        <!--<projecttask
+              beforeLogon="false"
+              breaks="6.3.0"
+              class="org.talend.designer.core.generic.model.migration.NewFileDelimitedMigrationTask"
+              description="New file delimited migration task"
+              id="org.talend.designer.core.generic.model.migration.NewFileDelimitedMigrationTask"
+              name="NewFileDelimitedMigrationTask"
+              version="6.3.0">
+        </projecttask> -->
+   </extension>
+   <extension
+         point="org.talend.designer.core.generic.fieldType_mapping">
+      <Mapping
+            mapFieldType="CHECK"
+            name="widget.type.default+java.lang.Boolean"
+            schemaType="java.lang.Boolean"
+            widgetType="widget.type.default">
+      </Mapping>
+      <Mapping
+            mapFieldType="CHECK"
+            name="widget.type.default+java.util.List&lt;java.lang.Boolean&gt;"
+            schemaType="List&lt;java.lang.Boolean&gt;"
+            widgetType="CHECK">
+      </Mapping>
+      <Mapping
+            mapFieldType="DATE"
+            name="widget.type.default+java.util.Date"
+            schemaType="java.util.Date"
+            widgetType="widget.type.default">
+      </Mapping>
+      <Mapping
+            mapFieldType="CLOSED_LIST"
+            name="widget.type.enumeration"
+            widgetType="widget.type.enumeration">
+      </Mapping>
+      <Mapping
+            mapFieldType="SCHEMA_TYPE"
+            name="widget.type.default+SCHEMA"
+            schemaType="SCHEMA"
+            widgetType="widget.type.default">
+      </Mapping>
+      
+       <Mapping
+            mapFieldType="BUTTON"
+            name="widget.type.button"
+            widgetType="widget.type.button">
+      </Mapping>
+       <Mapping
+            mapFieldType="COMPONENT_REFERENCE"
+            name="widget.type.component.reference"
+            widgetType="widget.type.component.reference">
+      </Mapping>
+       <Mapping
+            mapFieldType="NAME_SELECTION_AREA"
+            name="widget.type.name.selection.area"
+            widgetType="widget.type.name.selection.area">
+      </Mapping>
+       <Mapping
+            mapFieldType="NAME_SELECTION_REFERENCE"
+            name="widget.type.name.selection.widget"
+            widgetType="widget.type.name.selection.widget">
+      </Mapping>
+      <Mapping
+             mapFieldType="SCHEMA_EDITOR"
+             name="widget.type.schema.editor"
+             widgetType="widget.type.schema.editor">
+       </Mapping>
+       <Mapping
+            mapFieldType="SCHEMA_REFERENCE"
+            name="widget.type.schema.reference"
+            widgetType="widget.type.schema.reference">
+      </Mapping>
+      <!--Need implement table type on task TUP-4162 ,then disable first.
+      <Mapping
+            mapFieldType="TABLE"
+            name="TABLE"
+            widgetType="TABLE">
+      </Mapping>
+      -->
+       <Mapping
+            mapFieldType="HIDDEN_TEXT"
+            name="widget.type.hidden.text"
+            widgetType="widget.type.hidden.text">
+      </Mapping>
+       <Mapping
+             mapFieldType="TABLE"
+             name="widget.type.table"
+             widgetType="widget.type.table">
+       </Mapping>
+       <Mapping
+             mapFieldType="FILE"
+             name="widget.type.file"
+             widgetType="widget.type.file">
+       </Mapping>
+       <Mapping
+             mapFieldType="TEXT_AREA"
+             name="widget.type.textArea"
+             widgetType="widget.type.textArea">
+       </Mapping>
+       <Mapping
+             mapFieldType="JSON_TABLE"
+             name="widget.type.jsonTable"
+             widgetType="widget.type.jsonTable">
+       </Mapping>
+       <Mapping
+             mapFieldType="DIRECTORY"
+             name="widget.type.directory"
+             widgetType="widget.type.directory">
+       </Mapping>
+   </extension>
+   <extension
+         point="org.talend.designer.core.generators">
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.ButtonGenerator"
+            mapping="BUTTON"
+            name="Button">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.NameAndLabelsTreeGenerator"
+            mapping="NAME_SELECTION_AREA"
+            name="Name Selection Area">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.NameAndLabelsReferenceGenerator"
+            mapping="NAME_SELECTION_REFERENCE"
+            name="Name Selection Reference">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.ComponentRefGenerator"
+            mapping="COMPONENT_REFERENCE"
+            name="Component Reference">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.GenericHiddenTextGenerator"
+            mapping="HIDDEN_TEXT"
+            name="Hidden Text">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.SchemaReferenceGenerator"
+            mapping="SCHEMA_REFERENCE"
+            name="Schema Reference">
+      </generator>
+      <generator
+            class="org.talend.designer.core.generic.controller.generator.JsonTableGenerator"
+            mapping="JSON_TABLE"
+            name="Json Table">
+      </generator>
+   </extension>
+   <extension
+         point="org.talend.core.runtime.service">
+      <Service
+            class="org.talend.designer.core.generic.service.GenericService"
+            serviceId="IGenericService">
+      </Service>
+   </extension>
+
+</plugin>
