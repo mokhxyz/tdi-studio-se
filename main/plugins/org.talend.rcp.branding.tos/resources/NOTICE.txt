@@ -1,5 +1,5 @@
-Talend Open Studio for Data Integration
-Copyright (c) 2006 - 2016 Talend Inc. - www.talend.com
+Cogniphi Studio for Data Integration
+Copyright (c) 2006 - 2017 Cogniphi - www.cogniphi.com
 All rights reserved.
 
 
@@ -8,7 +8,7 @@ under the terms of the Apache License, Version 2.0
 
 
 This product includes software developed at
-Talend Inc. (http://www.talend.com).
+Cogniphi(www.cogniphi.com).
 
 
 This product includes software developed at
@@ -290,7 +290,7 @@ Licensed under Apache-2.0
 
 
 This product includes software developed at 
-Talend ESB Libraries.
+Cogniphi ESB Libraries.
 Licensed under Apache-2.0
 Talend
 
